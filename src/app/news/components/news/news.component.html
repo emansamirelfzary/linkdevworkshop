@@ -1,0 +1,39 @@
+<section class="mt-5 py-5 position-relative top-news">
+  <div class="container">
+    <div class="text-center">
+      <h4 class="text">Media</h4>
+      <h2 class="sec-title">Top News</h2>
+    </div>
+    <div>
+      <div class="my-3 text-center">
+        <ul class="d-flex justify-content-center category-nav">
+          <li><button class="btn text border-0 rounded-3 py-1" (click)="filterNews('all')" [class.active-cat]="selectedCategory=='all'">All news</button></li>
+        <li *ngFor="let cat of categories">
+          <button class="btn text ms-3 border-0 py-1 px-3 rounded-3" (click)="filterNews(cat.id)" [class.active-cat]="selectedCategory==cat.id">
+            {{cat.name}}
+          </button>
+        </li></ul>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6" *ngFor="let news of filteredNews |removeNullImg">
+        <div class="news-item rounded-4 overflow-hidden m-2 shadow">
+          <img [src]="news.urlToImage" alt="newsImg" class="w-100" >
+          <div class="py-4 px-3">
+          <a class="d-block" [routerLink]="['/newsdetails',news.index,news.categoryName]"><h2 class="text h6">{{news.title | sliceTitle}}</h2></a>
+          <span class="date"><i class="fa-regular fa-calendar icon fs-5"></i> {{news.publishedDate |  date:'EEEE  d MMMM y'}}</span>
+          <div class="d-flex justify-content-between mt-3">
+            <h3 class="category text rounded-pill text-center py-1">{{news.categoryName}}</h3>
+            <span>
+              <i class="fa-regular fa-heart icon me-2"></i>
+              <i class="fa-solid fa-share-nodes icon"></i>
+            </span>
+          </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
