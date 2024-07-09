@@ -9,6 +9,7 @@ import { Slide } from '../../interfaces/slide';
 })
 export class HomeBannerComponent implements OnInit{
 
+  unOrderedSlides:Slide[]=[]
   slides:Slide[]=[];
   slidesImages=["assets/images/slide1.png","assets/images/slid2.png","assets/images/slide3.png"]
   activeSlideIndex = 0;
@@ -20,7 +21,8 @@ export class HomeBannerComponent implements OnInit{
 ngOnInit(): void {
     this._homeService.getBanner().subscribe({
       next:(response)=>{
-        this.slides=response.slides
+       this.unOrderedSlides=response.slides
+        this.slides=this.unOrderedSlides.sort((a, b) => b.order - a.order);
         this.slides.map((slide,index)=>{
           slide.imgUrl=this.slidesImages[index]
         })

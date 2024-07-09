@@ -22,7 +22,6 @@
     "@ng-bootstrap/ng-bootstrap": "^17.0.0",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
-    "ngx-bootstrap": "^18.0.0",
     "primeng": "^17.18.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

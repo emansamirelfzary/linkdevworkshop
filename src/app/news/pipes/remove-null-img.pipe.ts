@@ -10,13 +10,7 @@ export class RemoveNullImgPipe implements PipeTransform {
 
     return value.map(news => {
       let img = new Image();
-       img.src = news.urlToImage;
-      if(img.complete && img.naturalHeight!==0){
-        news.urlToImage=news.urlToImage
-      }
-      else {
-        news.urlToImage="assets/images/relative.jpg"
-      }
+      
       return news
     });
   }

@@ -1,32 +1,26 @@
 <section class="py-5 bg-dark">
-  <carousel>
-    <slide *ngFor="let slide of slides; let index=index">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-          <div class="carousel-caption">
-        <h4 class="h6 text-uppercase" [ngStyle]="{'color': slide.colorCode}">Marking</h4>
-        <p>{{slide.title}}</p>
-      </div>
-          </div>
-          <div class="col-md-6">
-      <img [src]="slide.imgUrl" alt="image slide" style="display: block; width: 100%;"></div>
-     
-      </div>
-      </div>
-    </slide>
-  </carousel>
-  <ngb-carousel>
+	<ngb-carousel [showNavigationArrows]="false">
 		<ng-template ngbSlide *ngFor="let slide of slides" >
-			<div class="picsum-img-wrapper d-flex justify-content-center align-items-center">
-				<img [src]="slide.imgUrl" alt="Random first slide" class="vh-100"/>
+      <div>
+        <div class="container">
+			<div class="picsum-img-wrapper row align-items-center">
+        <div class="col-md-6 slide-caption">
+        <div class="carousel-caption text-start position-static">
+          <h4 class="h6 fw-bold  text-uppercase mb-4" [ngStyle]="{'color':'#' + slide.colorCode}">{{slide.category}}</h4>
+				<h2>{{slide.title}}</h2>
+				<p class="text w-75">{{slide.brief}}</p>
+        <button class="btn rounded-3 text-white" ngsty>Fined Out More</button>
 			</div>
-			<div class="carousel-caption ps-5 text-start w-50">
-				<a routerLink="/movie/trending" class="btn main-bg main-bg-hover rounded-0 text-white mb-3">Trending Movies</a>
-				<h2>" class="text-white">{{slide.title}}</h2>
-				<p></p>
-				<a class="btn bg-transparent view-more main-bg-hover rounded-pill text-white"></a>
+      </div>
+        <div class="col-md-6 pe-5">
+				<img [src]="slide.imgUrl" alt="Random first slide" class="pe-5 w-100"/>
 			</div>
+
+      </div>
+      </div>
+      </div>
 		</ng-template>
 	</ngb-carousel>
+
+
 </section>

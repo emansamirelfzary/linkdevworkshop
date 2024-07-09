@@ -20,7 +20,7 @@
         <div class="news-item rounded-4 overflow-hidden m-2 shadow">
           <img [src]="news.urlToImage" alt="newsImg" class="w-100" >
           <div class="py-4 px-3">
-          <a class="d-block" [routerLink]="['/newsdetails',news.index,news.categoryName]"><h2 class="text h6">{{news.title | sliceTitle}}</h2></a>
+          <a class="d-block text" [routerLink]="['/newsdetails',news.index,news.categoryName]"><h2 class="text h6">{{news.title | sliceTitle}}</h2></a>
           <span class="date"><i class="fa-regular fa-calendar icon fs-5"></i> {{news.publishedDate |  date:'EEEE  d MMMM y'}}</span>
           <div class="d-flex justify-content-between mt-3">
             <h3 class="category text rounded-pill text-center py-1">{{news.categoryName}}</h3>
