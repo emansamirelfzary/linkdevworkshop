@@ -4,6 +4,7 @@ import { NewsModule } from '../news/news.module';
 import { HomeComponent } from './components/home/home.component';
 import { HomeBannerComponent } from './components/home-banner/home-banner.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ThingsWeDoComponent } from './components/things-we-do/things-we-do.component';
 
 
 
@@ -12,7 +13,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     HomeComponent,
-    HomeBannerComponent
+    HomeBannerComponent,
+    ThingsWeDoComponent
   ],
   imports: [
     CommonModule,

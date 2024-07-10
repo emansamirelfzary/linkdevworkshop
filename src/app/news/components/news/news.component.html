@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="row g-4">
-      <div class="col-lg-4 col-md-6" *ngFor="let news of filteredNews |removeNullImg">
+      <div class="col-lg-4 col-md-6" *ngFor="let news of filteredNews">
         <div class="news-item rounded-4 overflow-hidden m-2 shadow">
           <img [src]="news.urlToImage" alt="newsImg" class="w-100" >
           <div class="py-4 px-3">

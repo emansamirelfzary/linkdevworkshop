@@ -7,11 +7,11 @@ import { AppComponent } from './app.component';
 import { NewsModule } from './news/news.module';
 import { HomeModule } from './home/home.module';
 import{ BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

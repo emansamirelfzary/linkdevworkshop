@@ -1,27 +1,31 @@
 <nav class="navbar navbar-expand-lg bg-transparent position-absolute top-0 w-100 start-0">
     <div class="container">
       <a class="navbar-brand"><img src="assets/images/logo.png" alt=""></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" >
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+        <ul class="navbar-nav ms-md-auto">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" routerLink="home">Home</a>
           </li>
-          <li class="nav-item mx-5">
+          <li class="nav-item mx-1 mx-xl-4">
             <a class="nav-link" href="#">Abou Us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="news">News</a>
           </li>
-          <li class="nav-item mx-5 pe-5">
+          <li class="nav-item mx-xl-4 mx-1 pe-5">
             <a class="nav-link" href="#">Contact Us</a>
           </li>
-          <li class="nav-item ps-5">
+          <li class="nav-item ps-xl-5">
             <a class="nav-link" href="#">Log in</a>
           </li>
-          <li class="nav-item mx-5">
+          <li class="nav-item mx-xl-4 mx-1">
             <a class="nav-link" href="#">Sign Up</a>
           </li>
           <li class="nav-item dropdown">
@@ -31,6 +35,7 @@
           </li>
 
         </ul>
+        </div>
       </div>
     </div>
   </nav>

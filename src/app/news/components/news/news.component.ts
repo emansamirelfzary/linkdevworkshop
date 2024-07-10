@@ -70,7 +70,7 @@ getAllnews(){
           if(news.categoryID==cat.id){
             news.categoryName=cat.name
           }})})
-          console.log()
+          console.log(this.allNews)
 
     }
   })
@@ -87,5 +87,6 @@ filterNews(CatId:string){
   console.log(this.allNews)}
 
 }
+
 
 }

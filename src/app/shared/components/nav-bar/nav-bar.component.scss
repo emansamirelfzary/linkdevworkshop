@@ -1,9 +1,13 @@
 nav
-{
+{z-index: 9999;
   .nav-item{
     font-family: 'Google Sans';
     a{
       color:#212832;
     }
-  }
+  
+  } 
+  .offcanvas-start{
+      width: 250px !important;
+}
 }

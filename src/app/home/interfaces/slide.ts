@@ -7,6 +7,7 @@ export interface Slide {
    imgUrl:string,
    itemUrl:string,
    videoUrl:string,
-   order:number
+   order:number,
+   vector:string
 
 }

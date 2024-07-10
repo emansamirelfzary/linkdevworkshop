@@ -31,11 +31,6 @@ export class NewsDetailsComponent implements OnInit{
       this._newsService.getNewsDetails(this.newsIndex).subscribe({
         next: (response) => {
           this.newsItem = response;
-          let img = new Image();
-          img.src = this.newsItem.urlToImage;
-          if(!img.complete && img.naturalHeight == 0){
-            this.newsItem.urlToImage="assets/images/relative.jpg"
-          };
           this.getRelatedNews(response.categoryID,response.id);
         },
       });

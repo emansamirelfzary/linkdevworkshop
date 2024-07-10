@@ -13,7 +13,7 @@
       </div>
       <div  class="col-md-4 pt-lg-5">
         <h4 class="mt-md-5">Related News</h4>
-        <div class="row pb-3 border-bottom mb-3" *ngFor="let relatedItem of relatedNews |removeNullImg">
+        <div class="row pb-3 border-bottom mb-3" *ngFor="let relatedItem of relatedNews">
           <div class="col-6">
             <img [src]="relatedItem.urlToImage" alt="related" class="w-100">
           </div>

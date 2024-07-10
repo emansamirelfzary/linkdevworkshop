@@ -6,13 +6,46 @@ import { News } from '../interfaces/news';
 })
 export class RemoveNullImgPipe implements PipeTransform {
 
-  transform(value: News[]): News [] {
-
-    return value.map(news => {
-      let img = new Image();
+    transform(value: News[]): Promise<News[]> {
+      return Promise.all(
+        value.map(async (news) => {
+          const imageExists = await this.loadImage(news.urlToImage);
+          if (!imageExists) {
+            news.urlToImage = "assets/images/relative.jpg";
+          }
+          return news;
+        })
+      );
+    }
+  
+    private loadImage(src: string): Promise<boolean> {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve(true);
       
-      return news
+      })}
+    }
+      /*
+  transform(value: News[]): Promise<News[]> {
+    return Promise.all(
+      value.map(async (news) => {
+        const imageExists = await this.loadImage(news.urlToImage);
+        if (!imageExists) {
+          news.urlToImage = "assets/images/relative.jpg";
+        }
+        return news;
+      })
+    );
+  }
+  
+  private loadImage(src: string): Promise<boolean> {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => resolve(true);
+      img.onerror = () => resolve(false);
+      img.src = src;
     });
   }
-
+  
 }
+*/

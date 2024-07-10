@@ -39,8 +39,83 @@ ul {
   color:$secondary-color
 }
 
+/* */
+.banner .carousel-indicators{
+  margin-left: auto;
+  justify-content: start;
+  align-items: center;
+  left: 6.7rem;
+  bottom: -.5rem;
+}
+.banner .carousel-indicators{
+  &::before{
+ content: "";
+  position: absolute;
+  background-image: url(../public/assets/images/dots.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 10px;
+  z-index: -2;
+  left: 2%;
+  scale: .9;
+  animation:scale .3s linear;
+}
+}
+
+
+
+@keyframes scale{
+  from {
+    transform: scale(.9);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.banner .carousel-indicators .active{
+ scale: 1.4;
+}
+.banner .carousel-indicators [data-bs-target]{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5.5rem;
+  opacity: 1;
+  transition: 1s !important;
+}
+
+.banner .carousel-indicators [data-bs-target]{
+  &:first-child{
+    background-color: $main-color
+  }
+  &:nth-child(2){
+    background-color:#A6E51C
+  }
+  &:last-child{
+    background-color:  #FF7C16
+  }
+}
 
 
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+
+@media screen and (max-width:768px) {
+:root{
+  font-size: 14px;
+}
+  .banner .carousel-indicators [data-bs-target]{
+  width: 20px;
+  height: 20px;
+  margin-right: 3.5rem;}
+
+  .banner .carousel-indicators{
+    &::before{
+      width: 200px;
+    }
+  }
+}
