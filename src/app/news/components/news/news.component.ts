@@ -33,6 +33,9 @@ if(this.selectedCategory="all"){
       this.getAllnews()
       console.log(this.allNews);
     },
+    error:(error) => {
+      console.log('categories error', error);
+    }
 
 })
 
@@ -54,9 +57,11 @@ getAllnews(){
           if (this.latestNews) {
             this.filteredNews = this.filteredNews.sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()).slice(0, 6);  
           }
+    },
+    error:(error) => {
+      console.log('news error', error);
     }
   })
-  console.log()
 }
 
 filterNews(CatId:string){

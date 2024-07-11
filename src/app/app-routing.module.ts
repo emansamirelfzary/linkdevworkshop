@@ -5,6 +5,7 @@ import { NewsDetailsComponent } from './news/components/news-details/news-detail
 import { HomeComponent } from './home/components/home/home.component';
 
 const routes: Routes = [
+  {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'home',component:HomeComponent},
   {path:'news',component:NewsComponent},
   {path:'newsdetails/:index/:categoryName',component:NewsDetailsComponent}

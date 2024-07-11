@@ -33,6 +33,9 @@ export class NewsDetailsComponent implements OnInit{
           this.newsItem = response;
           this.getRelatedNews(response.categoryID,response.id);
         },
+        error:(error) => {
+          console.log('error', error);
+        }
       });
     }
 
@@ -42,6 +45,9 @@ export class NewsDetailsComponent implements OnInit{
           this.allNews = response.News;
           this.relatedNews = this.allNews.filter(news => news.categoryID === categoryID && news.id!==id);
         },
+        error:(error) => {
+          console.log('error', error);
+        }
       });
     }
   }

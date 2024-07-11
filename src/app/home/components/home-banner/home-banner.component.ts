@@ -29,6 +29,9 @@ ngOnInit(): void {
           slide.vector=this.vectors[index]
         })
         console.log(this.slides)
+      },
+      error:(error) => {
+        console.log('error', error);
       }
     })
 }

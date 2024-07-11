@@ -6,17 +6,17 @@
     </div>
     <div>
       <div class="my-3 text-center">
-        <ul class="d-flex justify-content-center category-nav">
-          <li><button class="btn text border-0 rounded-3 py-1" (click)="filterNews('all')" [class.active-cat]="selectedCategory=='all'">All news</button></li>
+        <ul class="d-flex justify-content-center category-nav flex-md-nowrap flex-wrap">
+          <li><button class="btn mt-2 text border-0 rounded-3 py-1" (click)="filterNews('all')" [class.active-cat]="selectedCategory=='all'">All news</button></li>
         <li *ngFor="let cat of categories">
-          <button class="btn text ms-3 border-0 py-1 px-3 rounded-3" (click)="filterNews(cat.id)" [class.active-cat]="selectedCategory==cat.id">
+          <button class="btn mt-2 text ms-3 border-0 py-1 px-3 rounded-3" (click)="filterNews(cat.id)" [class.active-cat]="selectedCategory==cat.id">
             {{cat.name}}
           </button>
         </li></ul>
       </div>
     </div>
     <div class="row g-4">
-      <div class="col-lg-4 col-md-6" *ngFor="let news of filteredNews">
+      <div class="col-lg-4 col-sm-6 " *ngFor="let news of filteredNews">
         <div class="news-item rounded-4 overflow-hidden m-2 shadow">
           <img [src]="news.urlToImage" defaultImg alt="newsImg" class="w-100" >
           <div class="py-4 px-3">
@@ -32,8 +32,9 @@
           </div>
         </div>
       </div>
-
-
     </div>
+  </div>
+  <div *ngIf="latestNews" class="text-center mt-4">
+    <a routerLink="/news" class="btn view-all-news rounded-10 text-white">View All News</a>
   </div>
 </section>

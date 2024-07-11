@@ -1,6 +1,41 @@
 /* footer */
 footer{
+  &::after{
+  content:"";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(213 ,174 ,228,.8);
+  filter: blur(50px);
+  bottom: -55%;
+  right: -5%;
+  z-index:-1;
+  }
+
+
+
   .logo-text{
     font-size: 13px;
   }
+  h4{
+    color:#080809;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  ul li{
+    font-weight: 500;
+  }
+  .social{
+     span{
+    width:2.5rem;
+    height: 2.5rem;
+    line-height: 2.4;
+    i{
+      font-size:.9rem
+    }
+  }
+}
+p:last-of-type{
+  font-size: 14px;
+}
 }

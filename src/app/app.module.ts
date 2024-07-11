@@ -8,6 +8,9 @@ import { NewsModule } from './news/news.module';
 import { HomeModule } from './home/home.module';
 import{ BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { loadingInterceptor } from './interceptors/loading.interceptor';
 
 @NgModule({
   declarations: [
@@ -21,9 +24,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     NewsModule,
     HomeModule,
-    NgbModule
+    NgbModule,
+    NgxSpinnerModule
   ],
-  providers: [],
+  providers: [  
+    { provide: HTTP_INTERCEPTORS, useClass: loadingInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
