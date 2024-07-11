@@ -14,4 +14,12 @@ nav
   border: 2px solid #212832;
   border-radius: 10px;
 }
+
+.navbar-toggler{
+  border: none;
+}
+.navbar-toggler:focus{
+  box-shadow: none;
+
+}
 }
