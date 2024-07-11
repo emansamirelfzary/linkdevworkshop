@@ -1,6 +1,6 @@
 .things-we-do {
   background-color: #eeeeee;
-  padding-block: 100px 150px; 
+  padding-block: 100px; 
   
   .sec-title {
     font-family: "Poppins", sans-serif;
@@ -22,8 +22,8 @@
     &::before {
       content: "";
       position: absolute;
-      width: 70%;
-      height: 110%;
+      width: 75%;
+      height: 85%;
       top: 0%;
       right: -2%;
       background-color: #F215B6;
@@ -32,7 +32,6 @@
     }
     
     .sec-text {
-      width: 45%;
       
       h2 {
         color: #253776;
@@ -42,10 +41,6 @@
     }
   }
   
-  .things-imgs {
-    top: 17%;
-    right: 45%;
-  }
   
   .img-container {
     width: 250px;
@@ -69,28 +64,54 @@
   .service {
     transform: translateY(-25%);
   }
+}  
+  /* Media Queries */ 
+  @media screen and (max-width:1300px) {
   
-  /* Media Queries */
-  @media screen and (max-width: 1300px) {
-    .things-layout::before {
-      width: 80%;
-    }
     
     .img-container {
-      width: 200px;
-      height: 200px;
+      width: 200px !important;
+      height: 200px !important;
     }
-    
-    .sec-text {
-      width: 50%;
-    }
-    
-    .things-imgs {
-      right: 50%;
-    }
-  }
+   
   
-  @media screen and (max-width: 1100px) {
+}
+  @media screen and (max-width:1100px) {
+  
+    .sec-text {
+      
+      h2 {
+        font-size: 2.2rem !important;
+      }
+    }
+   
+}
+  @media screen and (max-width:991px) {
+  
+    .things-layout {
+    
+      &::before {
+        width: 100% !important;
+        height: 100% !important;
+        clip-path: polygon(81% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%) !important;
+
+
+      }
+      .sec-text{
+        .content{
+        text-align: left !important;
+        padding-left: 1.5rem !important;
+      }
+      }
+      
+    }
+    
+   
+}
+ 
+/*
+
+  @media screen and (max-width: 1200px) {
     .things-layout::before {
       width: 70%;
     }
@@ -100,12 +121,16 @@
     }
     
     .img-container {
-      width: 150px;
-      height: 150px;
+      width: 200px !important;
+      height: 200px;
     }
     
     .things-imgs {
-      right: 55%;
+      right: 45%;
     }
   }
 }
+
+@media screen and (max-width:991px){
+
+}*/
