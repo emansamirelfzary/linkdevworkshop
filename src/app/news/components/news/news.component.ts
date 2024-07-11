@@ -1,6 +1,5 @@
 import { Category } from './../../interfaces/category';
-import { forkJoin } from 'rxjs';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { News } from '../../interfaces/news';
 import { NewsService } from '../../services/news.service';
 
@@ -16,6 +15,9 @@ export class NewsComponent implements OnInit{
   selectedCategory:string="all"
   filteredNews:News[]=[]
 
+  @Input() latestNews: boolean = false;  // New input property
+
+
   constructor(private _newsService:NewsService){}
 
   ngOnInit(): void {
@@ -26,8 +28,8 @@ if(this.selectedCategory="all"){
 
     this._newsService.getCategory().subscribe({
     next: (response) => {
+    
       this.categories = response.newsCategory.splice(0,4);
-
       this.getAllnews()
       console.log(this.allNews);
     },
@@ -36,28 +38,6 @@ if(this.selectedCategory="all"){
 
 }
 
-/*    forkJoin({
-      news: this._newsService.getNews(),
-      categories: this._newsService.getCategory()
-    }).subscribe({
-      next: ({ news, categories }) => {
-        this.allNews = news.News;
-        this.filteredNews=this.allNews
-        this.categories = categories.newsCategory.splice(0,4);
-
-        this.allNews.map(news=>{
-          this.categories.map(cat=>{
-            if(news.categoryID==cat.id){
-              news.categoryName=cat.name
-            }})})
-
-
-        console.log(this.allNews);
-      },
-
-  })
-
-}*/
 getAllnews(){
   this._newsService.getNews().subscribe({
     next:(response)=>{
@@ -71,16 +51,19 @@ getAllnews(){
             news.categoryName=cat.name
           }})})
           console.log(this.allNews)
-
+          if (this.latestNews) {
+            this.filteredNews = this.filteredNews.sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()).slice(0, 6);  
+          }
     }
   })
+  console.log()
 }
 
 filterNews(CatId:string){
   this.selectedCategory=CatId
 
   if(this.selectedCategory=="all"){
-    this.filteredNews=this.allNews
+      this.filteredNews=this.allNews
   }else{
 
  this.filteredNews= this.allNews.filter(news=>news.categoryID==this.selectedCategory)

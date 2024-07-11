@@ -6,6 +6,7 @@ import { SliceTitlePipe } from './pipes/slice-title.pipe';
 import { NewsDetailsComponent } from './components/news-details/news-details.component';
 import { RouterModule } from '@angular/router';
 import { TabViewModule } from 'primeng/tabview';
+import { DefaultImgDirective } from './directives/default-img.directive';
 
 
 @NgModule({
@@ -13,13 +14,15 @@ import { TabViewModule } from 'primeng/tabview';
     NewsComponent,
     RemoveNullImgPipe,
     SliceTitlePipe,
-    NewsDetailsComponent
+    NewsDetailsComponent,
+    DefaultImgDirective
   ],
   imports: [
 CommonModule,
 RouterModule,
 TabViewModule
   ],
-  exports:[NewsComponent]
+  exports:[NewsComponent, DefaultImgDirective
+  ]
 })
 export class NewsModule { }

@@ -18,7 +18,7 @@
     <div class="row g-4">
       <div class="col-lg-4 col-md-6" *ngFor="let news of filteredNews">
         <div class="news-item rounded-4 overflow-hidden m-2 shadow">
-          <img [src]="news.urlToImage" alt="newsImg" class="w-100" >
+          <img [src]="news.urlToImage" defaultImg alt="newsImg" class="w-100" >
           <div class="py-4 px-3">
           <a class="d-block text" [routerLink]="['/newsdetails',news.index,news.categoryName]"><h2 class="text h6">{{news.title | sliceTitle}}</h2></a>
           <span class="date"><i class="fa-regular fa-calendar icon fs-5"></i> {{news.publishedDate |  date:'EEEE  d MMMM y'}}</span>

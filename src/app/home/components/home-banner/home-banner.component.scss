@@ -1,3 +1,5 @@
+/* home banner */
+
 .slide-bg{
   right: -18%;
   top: -65%;
@@ -9,8 +11,45 @@
 
 .banner-img{
   animation: move 1s ease;
+}
+
+
+.slide-caption{
+h2{
+  font-size: 4rem;
+  color:#181E4B;
+  font-weight: bold;
+}
+
+.vector {
+    right: -6%;
+    top: 30%;
+    z-index: -1;
+  animation: vibrate .5s linear;
 
 }
+
+button{
+  font-family: 'Google Sans';
+}
+.find-out{
+  padding-block: .7rem;
+}
+.demo{
+  color:#686D77;
+  line-height: 1.5rem;
+  span{
+    width: 2.9rem;
+    height: 2.9rem;
+    background-color: #E72228;
+    box-shadow: 0px 15px 60px #DF69514D;
+    line-height: 2.8rem ;
+  }
+}
+}
+
+
+/* animations */
 
 @keyframes move{
 
@@ -36,40 +75,9 @@ to {
   75% { transform: rotateZ(-5deg); }
   100% { transform: rotateZ(0); }
 }
-.slide-caption{
-h2{
-  font-size: 4rem;
-  color:#181E4B;
-  font-weight: bold;
-}
 
-.vector {
-    right: -6%;
-    top: 30%;
-    z-index: -1;
-  animation: vibrate .5s linear;
 
-}
-
-button{
-  font-family: 'Google Sans';
-}
-.find-out{
-  padding-block: .7rem;
-}
-.demo{
-  color:#686D77;
-  line-height: 2;
-  span{
-    width: 52px;
-    height: 52px;
-    background-color: #E72228;
-    box-shadow: 0px 15px 60px #DF69514D;
-    line-height: 3 ;
-  }
-}
-}
-
+/* media queries */
 
 @media screen and (max-width:1300px) {
   .slide-caption{
@@ -100,5 +108,23 @@ button{
     .slide-bg{
       right: -45%;
       top: -35%;
+  }
+
+  .banner-img{
+    width: 75%;
+  }
+}
+
+@media screen and (max-width:461px) {
+  .demo{
+    line-height: 1rem !important;
+     margin-left: .5rem !important;
+    span{
+      width: 2rem !important;
+      height: 2rem !important;
+      line-height: 2rem !important;
+      margin-right: .5rem !important;
+      
+    }
   }
 }

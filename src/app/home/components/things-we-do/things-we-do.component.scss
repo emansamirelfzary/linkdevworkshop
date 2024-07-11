@@ -23,7 +23,6 @@
     font-weight: bold;
   }
 .img-container{
-     
   width: 250px;
   height: 250px; 
   &:nth-child(odd) img{
@@ -44,9 +43,7 @@
 
 }
 
- .content{
-  transform: translateY(-8%);
-}  
+
   .service{
     transform: translateY(-25%);
   }
@@ -54,11 +51,18 @@
   .sec-text::before{
     content:"";
     position: absolute;
-    width: 150%;
-    height: 105%;
-    top: -15%;
-    right: -2%;
+    width: 175%;
+    height: 150%;
+    top: -25%;
+    right: -7%;
     background-color: #F215B6;
     z-index: -1;
+    clip-path: polygon(27% 0%, 99% 1%, 99% 99%, 0% 100%);
   }
+}
+
+
+/* media queries */
+@media screen and (max-width:1300px){
+  
 }

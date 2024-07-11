@@ -6,16 +6,14 @@ import { News } from '../interfaces/news';
 })
 export class RemoveNullImgPipe implements PipeTransform {
 
-    transform(value: News[]): Promise<News[]> {
-      return Promise.all(
-        value.map(async (news) => {
-          const imageExists = await this.loadImage(news.urlToImage);
+     transform(value: string): string {
+     
+          const imageExists = this.loadImage(value);
           if (!imageExists) {
-            news.urlToImage = "assets/images/relative.jpg";
+           return "assets/images/relative.jpg";
           }
-          return news;
-        })
-      );
+          return value;
+       
     }
   
     private loadImage(src: string): Promise<boolean> {

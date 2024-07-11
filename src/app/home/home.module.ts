@@ -14,12 +14,12 @@ import { ThingsWeDoComponent } from './components/things-we-do/things-we-do.comp
   declarations: [
     HomeComponent,
     HomeBannerComponent,
-    ThingsWeDoComponent
+    ThingsWeDoComponent,
   ],
   imports: [
     CommonModule,
     NewsModule,
-    NgbModule
+    NgbModule,
 
   ]
 })
