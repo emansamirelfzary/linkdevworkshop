@@ -22,6 +22,8 @@
 
 .category-nav {
   button{
+    width:6.8rem;
+    height: 2.3rem;
     background-color:#74747433;
     outline: none;
     transition: .6s;
@@ -37,7 +39,7 @@ height: 250px;
 object-fit: cover;
 }
 a{
-  min-height: 45px;
+height: 81px;
 
 }
 .date{
@@ -47,8 +49,9 @@ a{
 .category{
   font-size: .8rem;
   background-color: #74747433;
-  width: 6rem;
+  width: 6.1rem;
   font-weight: 400;
+  line-height: 1.38rem;
 }
 }
 
@@ -59,8 +62,12 @@ a{
 }
 
 .view-all-news{
+  width: 14.8rem;
+  height:3.4rem;
   background-color: #FF7C16;
   box-shadow: 0px 20px 70px #F1A50126;
+  line-height: 2.4rem;
+
 }
 
 

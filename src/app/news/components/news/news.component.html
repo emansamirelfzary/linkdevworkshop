@@ -9,7 +9,7 @@
         <ul class="d-flex justify-content-center category-nav flex-md-nowrap flex-wrap">
           <li><button class="btn mt-2 text border-0 rounded-3 py-1" (click)="filterNews('all')" [class.active-cat]="selectedCategory=='all'">All news</button></li>
         <li *ngFor="let cat of categories">
-          <button class="btn mt-2 text ms-3 border-0 py-1 px-3 rounded-3" (click)="filterNews(cat.id)" [class.active-cat]="selectedCategory==cat.id">
+          <button class="btn mt-2 text ms-3 border-0 py-1 px-1 rounded-3" (click)="filterNews(cat.id)" [class.active-cat]="selectedCategory==cat.id">
             {{cat.name}}
           </button>
         </li></ul>

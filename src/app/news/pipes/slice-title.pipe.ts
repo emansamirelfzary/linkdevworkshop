@@ -8,8 +8,8 @@ export class SliceTitlePipe implements PipeTransform {
   transform(value:string): string {
 
     let title=value.split(" ")
-    if(title.length<8) return value
-    return title.slice(0,8).join(" ")+"..."
+    if(title.length<10) return value
+    return title.slice(0,10).join(" ")+"..."
 
   }
 
