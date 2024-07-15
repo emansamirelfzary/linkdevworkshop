@@ -1,134 +1,135 @@
-/* fonts */
-@import "./styles/fonts";
-@import "./styles/variables";
+  /* fonts */
+  @import "./styles/fonts";
+  @import "./styles/variables";
 
 
-/* Global Styles */
-:root{
-  font-size: 18px;
-}
-
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-
-
-body {
-  font-family: "Poppins", sans-serif;
-}
-a{
-  text-decoration: none !important;
-}
-
-ul {
-  list-style: none;
-}
-
-/* classes*/
-.text{
-  color:$text-color;
-}
-
-.icon{
-  color:$secondary-color
-}
-
-/* banner carousel */
-
-.banner .carousel-indicators{
-  justify-content: start;
-  align-items: center;
-  left: 6.5rem;
-  margin-inline: 0 ;
-  bottom: -.5rem;
-  
-  &::before{
-  content: "";
-  position: absolute;
-  background-image: url(../public/assets/images/dots.png);
-  background-position: center center;
-  background-repeat: no-repeat;
-  width: 13.9rem;
-  height: .6rem;
-  z-index: -2;
-  left: 1.8rem;
-  scale: .9;
-  animation:scale .3s linear;
-}
-}
-
-
-
-@keyframes scale{
-  from {
-    transform: scale(.9);
+  /* Global Styles */
+  :root{
+    font-size: 18px;
   }
-  to {
-    transform: scale(1.1);
+
+
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
   }
-}
 
-.banner .carousel-indicators .active{
- scale: 1.4;
-}
-.banner .carousel-indicators [data-bs-target]{
-  width: 1.7rem;
-  height: 1.7rem;
-  border-radius: 50%;
-  margin-right: 5.5rem;
-  opacity: 1;
-  transition: 1s !important;
-}
 
-.banner .carousel-indicators [data-bs-target]{
-  &:first-child{
-    background-color: $main-color
+
+  body {
+    font-family: "Poppins", sans-serif;
   }
-  &:nth-child(2){
-    background-color:#A6E51C
+  a{
+    text-decoration: none !important;
   }
-  &:last-child{
-    background-color:  #FF7C16
+
+  ul {
+    list-style: none;
   }
-}
 
+  /* classes*/
+  .text{
+    color:$text-color;
+  }
 
+  .icon{
+    color:$secondary-color
+  }
 
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+  /* banner carousel */
 
-
-/* media queries */
-
-
-
-
-@media screen and (max-width:1100px){
   .banner .carousel-indicators{
-    left: 1.5rem;
+    justify-content: start;
+    align-items: center;
+    left: 6.5rem;
+    margin-inline: 0 ;
+    bottom: .5rem;
+
+    &::before{
+    content: "";
+    position: absolute;
+    background-image: url(../public/assets/images/dots.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 13.9rem;
+    height: .6rem;
+    z-index: -2;
+    left: 1.8rem;
+    scale: .9;
+    animation:scale .3s linear;
   }
-}
+  }
 
-@media screen and (max-width:768px) {
-:root{
-  font-size: 16px;
-}
-.banner .carousel-indicators{
-  left: 2rem;
-  justify-content: center;
-  &::before{
-  display: none
-  };
 
-  [data-bs-target]{
-    width: 1.2rem ;
-    height: 1.2rem;
-}
-}
-}
+
+  @keyframes scale{
+    from {
+      transform: scale(.9);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+
+  .banner .carousel-indicators .active{
+  scale: 1.4;
+  }
+  .banner .carousel-indicators [data-bs-target]{
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    margin-right: 5.5rem;
+    opacity: 1;
+    transition: 1s !important;
+  }
+
+  .banner .carousel-indicators [data-bs-target]{
+    &:first-child{
+      background-color: $main-color
+    }
+    &:nth-child(2){
+      background-color:#A6E51C
+    }
+    &:last-child{
+      background-color:  #FF7C16
+    }
+  }
+
+
+
+  /* Importing Bootstrap SCSS file. */
+  @import 'bootstrap/scss/bootstrap';
+
+
+  /* media queries */
+
+
+
+
+  @media screen and (max-width:1100px){
+    .banner .carousel-indicators{
+      left: 1.5rem;
+      bottom: -.5rem;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+  :root{
+    font-size: 16px;
+  }
+  .banner .carousel-indicators{
+    left: 2rem;
+    justify-content: center;
+    &::before{
+    display: none
+    };
+
+    [data-bs-target]{
+      width: 1.2rem ;
+      height: 1.2rem;
+  }
+  }
+  }

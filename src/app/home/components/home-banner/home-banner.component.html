@@ -9,23 +9,23 @@
           </g>
         </svg></div>
         <div class="container-lg container-fluid">
-			<div class="picsum-img-wrapper row align-items-center mt-4 pt-5 pe-xxl-5">
+			<div class="picsum-img-wrapper row align-items-center vh-100 pt-5 pe-xxl-5 position-relative">
         <div class="col-md-6 slide-caption">
-        <div class="carousel-caption text-start position-static">
+        <div class="carousel-caption text-start position-static py-0">
           <div class="position-relative">
           <h4 class="h6 fw-bold  text-uppercase mb-4 mt-5 mt-md-0" [ngStyle]="{'color':'#' + slide.colorCode}">{{slide.category}}</h4>
           <img [src]="slide.vector" alt="vector" class="vector position-absolute">
 				<h2 class="mb-xxl-4">{{slide.title}}</h2>
 				<p class="text w-75">{{slide.brief}}</p>
         </div>
-        <div class="d-flex align-items-center my-xxl-4 mb-md-5 mb-0">
+        <div class="d-flex align-items-center mt-xl-5  mb-0">
         <a href="https://linkdevelopment.com/" target="_blank" class="btn rounded-3 text-white border-0 fw-lighter px-lg-3 px-1 find-out " [ngStyle]="{'background-color': '#' + slide.colorCode}">Find Out More</a>
         <a href="https://www.youtube.com/@linkdevelopment9983" target="_blank" class="demo d-block mx-lg-5 ms-4"><span class="d-inline-block rounded-circle text-center me-3"><i class="fa-solid fa-play text-white"></i></span>paly Demo</a>
         </div>
 			</div>
       </div>
-        <div class="col-md-6">
-				<img [src]="slide.imgUrl" alt="slide" class="pe-xl-5 w-100 banner-img"/>
+        <div class="col-md-6 position-absolute banner-img-container mt-3">
+				<img [src]="slide.imgUrl" alt="slide" class="pe-xl-5  banner-img"/>
 			</div>
 
       </div>

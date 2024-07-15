@@ -3,7 +3,7 @@
 .slide-bg {
   position: relative;
   right: -18%;
-  top: -65%;
+  top: -40%;
   z-index: -1;
 
   .rotate {
@@ -11,10 +11,13 @@
   }
 }
 
+.banner-img-container{
+  left: 43%;
+
 .banner-img {
   animation: move 1s ease;
 }
-
+}
 .slide-caption {
   h2 {
     font-size: 4rem;
@@ -57,7 +60,7 @@
 
 @keyframes move {
   from {
-    transform: translate(-10%, 10%);
+    transform: translate(-10%, 5%);
   }
   to {
     transform: translate(0%, 0%);
@@ -92,7 +95,7 @@
 
 @media screen and (max-width: 1200px) {
   .slide-bg .rotate {
-    width: 600px; 
+    width: 600px;
   }
   .slide-caption h2 {
     font-size: 3rem;
@@ -100,39 +103,49 @@
 }
 
 @media screen and (max-width: 991px) {
+  .row{
+    height: auto !important;
+  }
+.banner-img-container{
+  position: static !important;
+  .banner-img{
+    width: 100%;
+  }
+}
+
   .slide-bg .rotate {
-    width: 500px; 
+    width: 500px;
   }
   .slide-caption h2 {
-    font-size: 2rem; 
+    font-size: 2rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   .slide-caption .vector {
-    right: 12%; 
+    right: 12%;
   }
   .slide-bg {
-    right: -45%; 
+    right: -45%;
     top: -15%;
   }
   .slide-bg .rotate {
-    width: 700px; 
+    width: 700px;
   }
   .banner-img {
-    width: 75%; 
+    width: 75%;
   }
 }
 
 @media screen and (max-width: 576px) {
   .demo {
-    line-height: 1rem; 
-    margin-left: .5rem; 
+    line-height: 1rem;
+    margin-left: .5rem;
     span {
-      width: 2rem; 
+      width: 2rem;
       height: 2rem;
       line-height: 2rem;
-      margin-right: .5rem; 
+      margin-right: .5rem;
     }
   }
 
@@ -140,7 +153,7 @@
     top: -30%;
   }
   .slide-bg .rotate {
-    width: 500px; 
+    width: 500px;
   }
 }
 
