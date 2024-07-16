@@ -23,6 +23,8 @@
     font-size: 4.17rem;
     color: #181E4B;
     font-weight: bold;
+    line-height: 4.9rem;
+    
   }
 
   .vector {
@@ -93,7 +95,7 @@
 
 /* Media Queries */
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1400px) {
     .slide-bg {
       .rotate {
         width: 600px;
@@ -101,7 +103,7 @@
     }
     .slide-caption {
       h2 {
-        font-size: 3rem !important;
+        font-size: 3.5rem !important;
       }
     }
   }
